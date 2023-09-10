@@ -11,3 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.custom-bullet {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.custom-bullet > li::before {
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+
+  height: 15px;
+
+  width: 15px;
+
+  background-image: url("./Components/bullet.png");
+  background-size: cover;
+}
+
+.custom-bullet > li {
+  line-height: 15px;
+}
+
+.card-width{
+  min-width: 17rem !important;
+  font-size: .7em;
+  text-align: left !important;
+}
+
+.body-pad{
+  padding: .4em !important;
+}
+
+.card-title{
+  font-weight: bold !important;
+  font-size: 1em !important;
+}
+
+/* .column-title{
+  font-weight: bold;
+  font-size: 1
+} */
