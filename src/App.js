@@ -8,17 +8,6 @@ function App() {
 
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [statusStates, setStatusStates] = useState([]);
-
-  const getStatus = () => {
-
-    let uniqueStatus = new Set();
-
-    for(let i of data){
-      uniqueStatus.add(i.status);
-    }
-    setStatusStates(uniqueStatus);
-  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,7 +27,6 @@ function App() {
         const mockData = await response.json();
         setData(mockData.data); // Set the data directly
 
-        getStatus();
         setLoading(false);
 
         console.log(mockData.data); // Log the data here
@@ -70,9 +58,6 @@ function App() {
         )
       }
 
-      {/* <header className="App-header">
-        <CandidateCard data={{ "name": "a" }} />
-      </header> */}
     </div>
   );
 }
